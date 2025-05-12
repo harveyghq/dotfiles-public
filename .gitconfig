@@ -1,0 +1,40 @@
+[alias]
+    ci = commit -v
+    cis = commit -S -v
+    st = status -sb
+    sh = stash
+    shl = stash list
+    shpm = stash push -m
+    di = diff
+    dis = diff --stat
+    dc = diff --cached
+    dcs = diff --cached --stat
+    dh = diff HEAD~
+    dhs = diff HEAD~ --stat
+    lg = log -p
+    gr = log --graph --format=line # graph
+
+[diff]
+    mnemonicPrefix = true
+    wordRegex = "[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+    compactionHeuristic = true
+
+[pretty]
+    line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
+    detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
+
+[credential]
+    credentialStore = cache
+    cacheOptions = "--timeout 3600"
+
+[merge]
+    defaultToUpstream = true
+    tool = vimdiff
+
+[mergetool]
+    keepBackup = false
+
+[user]
+    email = harveywandering@gmail.com
+    name = harveyghq
+    signingkey = CD8DE77DDEFAF742
