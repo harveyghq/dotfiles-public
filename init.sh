@@ -4,7 +4,7 @@ set -e
 if [ ! -e phase1.tmp ]; then
     sudo apt update -y
     sudo apt install zsh tmux xsel git vim-gtk3 curl wget unzip -y
-    sudo apt install build-essential python3 python3-pip -y
+    sudo apt install build-essential python3 python3-pip libssl-dev -y
     touch phase1.tmp
 fi
 
